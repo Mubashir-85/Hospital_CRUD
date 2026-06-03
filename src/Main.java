@@ -68,6 +68,7 @@ public class Main {
                     sc.nextLine();
                     if(!service.patientExists(removeId)){
                         System.out.println("Patient Not Found..");
+                        break;
                     }
                     service.deletePatient(removeId);
                     break;
@@ -77,6 +78,7 @@ public class Main {
                     sc.nextLine();
                     if(!service.patientExists(searchId)){
                         System.out.println("Patient Not found");
+                        break;
                     }
                     service.searchPatient(searchId);
                     break;
