@@ -70,6 +70,16 @@ public class Main {
                         System.out.println("Patient Not Found..");
                     }
                     service.deletePatient(removeId);
+                    break;
+                case 5:
+                    System.out.println("Enter ID: ");
+                    int searchId = sc.nextInt();
+                    sc.nextLine();
+                    if(!service.patientExists(searchId)){
+                        System.out.println("Patient Not found");
+                    }
+                    service.searchPatient(searchId);
+                    break;
 
 
 
