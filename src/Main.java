@@ -28,13 +28,17 @@ public class Main {
 
                     System.out.println("Enter Age:");
                     int age = sc.nextInt();
+                    sc.nextLine();
 
                     System.out.println("Enter Reason:");
                     String reason = sc.nextLine();
 
-                    sc.nextLine();
 
-                    service.addPatient(new Patient(id,name,age,reason));
+                    service.addPatient(new Patient(id, name, age, reason));
+                    break;
+
+                case 2:
+                    service.viewPatient();
                     break;
 
             }
