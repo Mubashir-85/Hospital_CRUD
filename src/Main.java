@@ -80,7 +80,11 @@ public class Main {
                     }
                     service.searchPatient(searchId);
                     break;
-
+                case 6:
+                    System.out.println("Thank you for using Hospital Management System");
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid Choice");
 
 
             }
