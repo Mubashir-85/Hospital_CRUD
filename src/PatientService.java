@@ -38,4 +38,13 @@ public class PatientService {
         System.out.println("Patient Not Found!!!!!");
     }
 
+    public void deletePatient(int id){
+        for(Patient patient: patients){
+            if(patient.getId() == id){
+                patients.remove(patient);
+                System.out.println("Patient deleted successfully....");
+            }
+        }
+    }
+
 }

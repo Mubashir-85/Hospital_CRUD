@@ -62,6 +62,16 @@ public class Main {
                     service.updatePatient(updatedId,updatedName,updatedAge,updatedReason);
                     break;
 
+                case 4:
+                    System.out.println("Enter Id:");
+                    int removeId = sc.nextInt();
+                    sc.nextLine();
+                    if(!service.patientExists(removeId)){
+                        System.out.println("Patient Not Found..");
+                    }
+                    service.deletePatient(removeId);
+
+
 
             }
         }
