@@ -41,6 +41,28 @@ public class Main {
                     service.viewPatient();
                     break;
 
+                case 3:
+                    System.out.println("Enter ID:");
+                    int updatedId = sc.nextInt();
+                    sc.nextLine();
+                    if (!service.patientExists(updatedId)) {
+                        System.out.println("Patient Not Found!");
+                        break;
+                    }
+                    System.out.println("Enter Updated Name:");;
+                    String updatedName = sc.nextLine();
+
+                    System.out.println("Enter Updated Age:");
+                    int updatedAge = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Enter Updated Reason");
+                    String updatedReason = sc.nextLine();
+
+                    service.updatePatient(updatedId,updatedName,updatedAge,updatedReason);
+                    break;
+
+
             }
         }
 

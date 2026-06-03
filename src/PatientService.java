@@ -14,4 +14,28 @@ public class PatientService {
         }
     }
 
+    public boolean patientExists(int id) {
+        for (Patient patient : patients) {
+            if (patient.getId() == id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void updatePatient(int id,String name, int age, String reason){
+        for(Patient patient: patients){
+            System.out.println("Found ID: " + patient.getId());
+            if(patient.getId() == id){
+                patient.setName(name);
+                patient.setAge(age);
+                patient.setReason(reason);
+                System.out.println("Patient Updated successfully");
+                return;
+
+            }
+        }
+        System.out.println("Patient Not Found!!!!!");
+    }
+
 }
